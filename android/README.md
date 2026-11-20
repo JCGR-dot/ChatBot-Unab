@@ -20,7 +20,7 @@ App nativa (Kotlin + Jetpack Compose + Material 3) que sirve de cliente del chat
 `local.properties` **no se versiona**. Además de `sdk.dir`, admite:
 
 ```properties
-sdk.dir=C\:/Users/jose/AppData/Local/Android/Sdk
+sdk.dir=C\:/Users/<tu-usuario>/AppData/Local/Android/Sdk
 chatbot.baseUrl=https://chatbot-unab.duckdns.org
 chatbot.key=TU_CLAVE_X_CHATBOT_KEY
 ```
@@ -33,7 +33,7 @@ Se exponen como `BuildConfig.BASE_URL` y `BuildConfig.CHATBOT_KEY`. Si cambias `
 Requiere JDK 17+ (se usa el JBR de Android Studio) y Android SDK con plataforma 35.
 
 ```bash
-cd "/d/José Tellez/Documents/universidad/sexto semestre/ciencia de datos/chatbot-academico-unab/android"
+cd ChatBot-Unab/android   # desde la carpeta donde clonaste el repo
 export JAVA_HOME="/c/Program Files/Android/Android Studio/jbr"
 ./gradlew assembleDebug
 ```
@@ -44,7 +44,7 @@ El APK queda en:
 app/build/outputs/apk/debug/app-debug.apk
 ```
 
-Nota: la ruta del proyecto tiene tilde (`José`), por eso `gradle.properties` incluye `android.overridePathCheck=true`.
+Nota: `gradle.properties` incluye `android.overridePathCheck=true` para que el proyecto compile aunque la ruta donde se clonó tenga caracteres no ASCII (tildes, ñ). Si la ruta no los tiene, el ajuste no afecta.
 
 Instalar en un dispositivo/emulador conectado:
 

@@ -1,6 +1,6 @@
 # Despliegue en AWS + DuckDNS
 
-Guía para replicar el despliegue desde cero. Cada paso marcado con 📸 requiere una captura en `docs/evidencias/` (nombres sugeridos en [evidencias/README.md](evidencias/README.md)).
+Guía para replicar el despliegue desde cero. Cada paso marcado con 📸 requiere una captura en `docs/evidencias/` con el nombre de archivo que aparece junto al 📸 (las ya tomadas están en [evidencias/](evidencias/)).
 
 ## 1. Tamaño de instancia
 
@@ -92,7 +92,7 @@ docker compose ps
 
 ## 8. n8n
 
-1. Abrir `https://<DOMAIN>` → crear la cuenta owner. 📸 `07-n8n-login-https.png` 
+1. Abrir `https://chatbot-unab.duckdns.org` → crear la cuenta owner. 📸 `07-n8n-login-https.png` 
 2. Importar credenciales y workflows:
 ```bash
 bash scripts/n8n-import.sh

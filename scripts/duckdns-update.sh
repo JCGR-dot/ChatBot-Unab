@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Actualiza el registro DuckDNS con la IP pública actual de la instancia.
 # Con Elastic IP basta correrlo una vez; sin Elastic IP, déjalo en cron (la IP cambia al reiniciar el lab):
-#   crontab -e   ->   */5 * * * * /home/ubuntu/chatbot-academico-unab/scripts/duckdns-update.sh >/dev/null 2>&1
+#   crontab -e   ->   */5 * * * * /home/ubuntu/ChatBot-Unab/scripts/duckdns-update.sh >/dev/null 2>&1
 set -euo pipefail
 cd "$(dirname "$0")/.."
 SUB=$(grep ^DUCKDNS_SUBDOMAIN= .env | cut -d= -f2)
